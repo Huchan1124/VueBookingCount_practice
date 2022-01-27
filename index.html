@@ -63,7 +63,8 @@
                             </li>
                             <li class="d-flex justify-content-end">
                                 <h5>總金額</h5>
-                                <p>{{   tktNum * groupPrice + tktNum * handleFee }} 元</p>
+                                <p v-if="!isClub">{{   tktNum * originPrice + tktNum * handleFee }} 元</p>
+                                <p v-else>{{   tktNum * groupPrice + tktNum * handleFee }} 元</p>
                             </li>
                         </ul>
 
