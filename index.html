@@ -11,9 +11,12 @@
 
 <body>
     <div id="app">
-        <div class="container">
+        <div class="container p-5">
             <div class="row justify-content-center">
                 <div class="col-lg-5">
+                    <div class=" d-flex justify-content-center">
+                        <h5>人數</h5>
+                    </div>
                     <div class="tktQuantity__section d-flex justify-content-center">
                         <ul class="list-unstyled d-flex  p-3">
                             <li class="pe-3"><button type="button" class="btn btn-primary">1</button></li>
@@ -39,7 +42,7 @@
                                 <p>0 張</p>
                             </li>
                             <li class="d-flex justify-content-between">
-                                <div>
+                                <div class="d-flex align-items-center">
                                     <input type="text">
                                     <button type="button" class="ms-2 btn btn-primary">確認</button>
             
@@ -47,7 +50,31 @@
                                 <p>訂票手續費 $20/張</p>
                             </li>
                         </ul>
-            
+                    </div>
+                    <hr>
+                    <div  class="tktQuantityOrder__section">
+                        <ul class="list-unstyled  p-3">
+                            <li class="d-flex justify-content-end">
+                                <h5>手續費 </h5>
+                                <p>20 X 1 元</p>
+                            </li>
+                            <li class="d-flex justify-content-end">
+                                <h5>總金額</h5>
+                                <p>290 元</p>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <hr>
+                    <div class="joinClub__section d-flex justify-content-center">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" name="club" id="joinClub">
+                            <label for="joinClub" class="ms-3">加入會員</label>
+
+                        </div>
+                     
+
                     </div>
 
                 </div>
