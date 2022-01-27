@@ -6,10 +6,8 @@ const data = {
     handleFee:20,
     tktNum:1,
     couponNum:0,
+    couponType:["voucher","groupPrice","discount"],
     isClub:1,
-    // originPriceTotal: tktNum * originPrice,
-    // groupPriceTotal: tktNum * groupPrice,
-    // handleFeeTotal: tktNum * handleFee,
 
 };
 
@@ -22,15 +20,11 @@ const app = {
         }
     },
     methods:{
-
         selectTktNum(num){
             this.tktNum = num;
 
         },
-        addNoClubStyle(){
-
-        },
-
+    
     },
     mounted(){
 
