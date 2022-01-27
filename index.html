@@ -34,9 +34,10 @@
                                 <p>{{ tktNum }} 張</p>
                             </li>
                             <li class="d-flex justify-content-between">
-                                <h5><span class="text-decoration-line-through">全票</span>  <span>優惠票價</span></h5>
-                                <p ><span class="text-decoration-line-through me-3">{{ tktNum * originPrice}} </span>
-                                    <span>{{ tktNum * groupPrice}} </span> 元</p>
+                                <h5><span :class="{ 'text-decoration-line-through': isClub == 1  } ">全票</span>  
+                                    <span :class="{ 'd-none': isClub != 1  } ">優惠票價</span></h5>
+                                <p ><span :class="{ 'text-decoration-line-through': isClub == 1  }, me-3">{{ tktNum * originPrice}} </span>
+                                    <span :class="{ 'd-none': isClub != 1  } ">{{ tktNum * groupPrice}} </span> 元</p>
                              
                             </li>
                             <li class="d-flex justify-content-between">
@@ -71,7 +72,7 @@
                     <hr>
                     <div class="joinClub__section d-flex justify-content-center">
                         <div class="d-flex align-items-center">
-                            <input type="checkbox" name="club" id="joinClub">
+                            <input type="checkbox" name="club" id="joinClub" :checked=" isClub ? 1 : 0" @click="isClub = !isClub">
                             <label for="joinClub" class="ms-3">加入會員</label>
 
                         </div>

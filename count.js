@@ -6,6 +6,7 @@ const data = {
     handleFee:20,
     tktNum:1,
     couponNum:0,
+    isClub:1,
     // originPriceTotal: tktNum * originPrice,
     // groupPriceTotal: tktNum * groupPrice,
     // handleFeeTotal: tktNum * handleFee,
@@ -25,7 +26,10 @@ const app = {
         selectTktNum(num){
             this.tktNum = num;
 
-        }
+        },
+        addNoClubStyle(){
+
+        },
 
     },
     mounted(){
