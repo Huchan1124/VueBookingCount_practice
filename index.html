@@ -19,27 +19,29 @@
                     </div>
                     <div class="tktQuantity__section d-flex justify-content-center">
                         <ul class="list-unstyled d-flex  p-3">
-                            <li class="pe-3"><button type="button" class="btn btn-primary">1</button></li>
-                            <li class="pe-3"><button type="button" class="btn btn-primary">2</button></li>
-                            <li class="pe-3"><button type="button" class="btn btn-primary">3</button></li>
-                            <li class="pe-3"><button type="button" class="btn btn-primary">4</button></li>
-                            <li class="pe-3"><button type="button" class="btn btn-primary">5</button></li>
-                            <li class="pe-3"><button type="button" class="btn btn-primary">6</button></li>
+                            <li class="pe-3"><button type="button" class="btn btn-primary" @click="selectTktNum(1)">1</button></li>
+                            <li class="pe-3"><button type="button" class="btn btn-primary" @click="selectTktNum(2)">2</button></li>
+                            <li class="pe-3"><button type="button" class="btn btn-primary" @click="selectTktNum(3)">3</button></li>
+                            <li class="pe-3"><button type="button" class="btn btn-primary" @click="selectTktNum(4)">4</button></li>
+                            <li class="pe-3"><button type="button" class="btn btn-primary" @click="selectTktNum(5)">5</button></li>
+                            <li class="pe-3"><button type="button" class="btn btn-primary" @click="selectTktNum(6)">6</button></li>
                         </ul>
                     </div>
                     <div class="tktQuantityTotal__section">
                         <ul class="list-unstyled  p-3">
                             <li class="d-flex justify-content-between">
                                 <h5>購買張數</h5>
-                                <p>{{ tktNum }}張</p>
+                                <p>{{ tktNum }} 張</p>
                             </li>
                             <li class="d-flex justify-content-between">
-                                <h5>全票</h5>
-                                <p>{{ tktNum * originPrice}}元</p>
+                                <h5><span class="text-decoration-line-through">全票</span>  <span>優惠票價</span></h5>
+                                <p ><span class="text-decoration-line-through me-3">{{ tktNum * originPrice}} </span>
+                                    <span>{{ tktNum * groupPrice}} </span> 元</p>
+                             
                             </li>
                             <li class="d-flex justify-content-between">
                                 <h5>兌換張數</h5>
-                                <p>{{ couponNum }}張</p>
+                                <p>{{ couponNum }} 張</p>
                             </li>
                             <li class="d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
@@ -55,12 +57,12 @@
                     <div  class="tktQuantityOrder__section">
                         <ul class="list-unstyled  p-3">
                             <li class="d-flex justify-content-end">
-                                <h5>手續費 </h5>
-                                <p>{{handleFee}} X {{tktNum}} 元</p>
+                                <h5>手續費</h5>
+                                <p> {{handleFee}} X {{tktNum}} 元</p>
                             </li>
                             <li class="d-flex justify-content-end">
                                 <h5>總金額</h5>
-                                <p>{{ tktNum * originPrice + tktNum * handleFee }} 元</p>
+                                <p>{{   tktNum * groupPrice + tktNum * handleFee }} 元</p>
                             </li>
                         </ul>
 

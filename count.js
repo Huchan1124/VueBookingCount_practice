@@ -22,6 +22,11 @@ const app = {
     },
     methods:{
 
+        selectTktNum(num){
+            this.tktNum = num;
+
+        }
+
     },
     mounted(){
 
